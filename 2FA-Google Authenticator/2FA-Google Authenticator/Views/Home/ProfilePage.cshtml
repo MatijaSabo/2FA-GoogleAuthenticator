@@ -7,8 +7,164 @@
     <h1>Profile Page</h1>
 </div>
 
-<div>
-    <h3>Welcome @ViewBag.Message</h3>
+<div class="alert alert-info alert-dismissable">
+    <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+    <strong>Welcome @ViewBag.Message</strong>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading"><h3 class="panel-title">ŠTO JE AUTENTIFIKACIJA</h3></div>
+    <div class="panel-body">
+        <p>Autentifikacija je proces kojim se određuje identitet nekog subjekta, najčešće fizičke osobe. 
+        U praksi se to svodi na to da osoba daje određene podatke po kojima bi druga strana trebama moći utvrditi da je ta osoba upravo ona za koju se predstavlja. 
+        Najčešći primjeri sa kojima se svi susrećemo su korištenje bankomata te prijava na neku stranicu. Naime, da bi smo koristili bankomat moramo imati vlastitu karticu i pripadajući pin, a za prijavu na neku stranicu koristimo korisničko ime i pripadajuću zaporku. 
+        Da bi proces autentifikacije bio upotrebljiv treba zadovoljavati nekoliko zahtjeva: visoka razina sigurnosti, praktičnost, financijska isplativost i jednostavnost upravljanja.</p>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse1">Podjela</a>
+                    </h4>
+                </div>
+                <div id="collapse1" class="panel-collapse collapse">
+                    <ul class="list-group">
+                        <li class="list-group-item">Jedno-faktorska autentifikacija</li>
+                        <li class="list-group-item">Dvo-faktorska autentifikacija</li>
+                        <li class="list-group-item">Više-faktorska autentifikacija</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="panel panel-primary">
+    <div class="panel-heading"><h3 class="panel-title">ŠTO JE DVO FAKTORSKA AUTENTIFIKACIJA</h3></div>
+    <div class="panel-body">
+        <p>
+            Dvo-faktorska autentifikacija (eng. 2FA) je nadogradnja osnovne autentifikacije, gdje koristimo samo jednu razinu autentifikacije kao što je unos korisničkog imena i lozinka. 
+            Dodavanjem još jedne razine autentifikacije dolazimo do dvo-faktorske autentifikacije. 
+            Naime, ona zahtjeva da koristimo barem dva od tri načina identifikacije čime se postiže veći stupanj sigurnosti podataka i manja mogućnost hakiranja istih.
+        </p>
+
+        <p>
+            Sigurnost se temelji na tome što napadač ukoliko želi uspješno izvršiti napad mora posjedovati sve uključene faktore (faktor znanja, faktor posjedovanja i faktor pripadanja).
+            Naime, ukoliko se napadač pokuša autentificirati samo sa jednim način, dvo faktorska autentifikacija mu onemugućava daljni prolazak u sustav i samim time su mu podaci nedostupni.
+        </p>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse2">Podjela</a>
+                    </h4>
+                </div>
+                <div id="collapse2" class="panel-collapse collapse">
+                    <ul class="list-group">
+                        <li class="list-group-item">Nešto što znaš – pin, lozinka, uzorci...</li>
+                        <li class="list-group-item">Nešto što imaš – mobilni uređaj, token, kartica...</li>
+                        <li class="list-group-item">Nešto što jesi – otisak prsta, gps lokacija, prepoznavanje glasa...</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse3">Faktor znanja</a>
+                    </h4>
+                </div>
+                <div id="collapse3" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>
+                            Faktor znanja je najčešće korišten način autentifikacije, čime se podrazumijeva da korisnik treba iskazati znanje o nečemu tajnom kako bi se autentificirao.
+                            Lozinka je tajna riječ ili niz znakova koji se koriste za autentifikaciju te se smatra najčešćim mehanizmom autentifikacije. Mnoge se više-faktorske tehnike autentificiranja oslanjaju na lozinkama kao jedan od faktora autentifikacije. Tako postoje kraće lozinke, fraze, pinovi itd. koje je najbolje zapamtiti.
+                            Uz lozinke se češto javljaju i tajna pitanja za izgubljenu lozinku tipa „Gdje ste rođeni?“ ili „Djevojačko prezime Vaše majke?“ . Takva pitanja i nisu baš najsigurniji način za dobivanje novih lozinka jer se lagano dolazi do odgovora na ista sa malo truda i pretraživanja.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse4">Faktor posjedovanja</a>
+                    </h4>
+                </div>
+                <div id="collapse4" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>
+                            Faktor posjedovanja se oslanja na tome da korisnik nešto posjeduje kako bi se autentificirao.  
+                            Sličan način se koristi već stolječima sa ključem i bravom gdje ključ se utjelovljuje kao tajna između jedne brave i tog ključa što se može prikazati kao i faktor posjedovanja kod današnjih načina autentifikacije. 
+                            Jedan od današnjih primjera je sigurnosni token. Postoje dvije vrste takvih tokena. Jedna je isključeni token gdje se on fizički ne spaja sa uređajem nego se na njegovom zaslonu prikazuje ključ. 
+                            Druga vrsta je uključeni token gdje se on fizički povezuje sa uređajem i automatski šalje podatke i dopušta autentifikaciju. 
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse5">Faktor pripadanja</a>
+                    </h4>
+                </div>
+                <div id="collapse5" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>
+                            Faktor pripadanja je faktor autentifikacije gdje se korisnik autentificira tako da se mu provjeri otisak prsta,skeniranje rožnice ili prepoznavanje glasa.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse6">Faktor lokacije</a>
+                    </h4>
+                </div>
+                <div id="collapse6" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>
+                            Kao četvrti mogući faktor korisniku se nudi faktor lokacije.
+                            Sveprisutnosću pametnih telefona možemo si olakšati autentifikaciju.
+                            Korisnici često nose svoje mobilne uređaje svuda sa sobom, pa se tako može omogućiti potvrda o lokaciji za prijavu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="panel-group">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4 class="panel-title">
+                        <a data-toggle="collapse" href="#collapse7">Faktor vremena</a>
+                    </h4>
+                </div>
+                <div id="collapse7" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <p>
+                            Ovaj faktor se koristi u velikim poduzećima gdje se neki zaposlenik može ulogirati u sustav u određenom vremenu.
+                            Još jedna primjena jest ta da neke kreditne kartice nedozvoljavaju korištenje iste na nekom mjestu i na nekom jako udaljenom mjestu u kratkom vremenskom periodu.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
 </div>
 
 <div>

@@ -34,11 +34,11 @@ namespace _2FA_Google_Authenticator.Controllers
                 //
                 var SetupInfo = tfa.GenerateSetupCode("QR Code", login.Username, key, 300, 300);
                 ViewBag.BarcodeImageUrl = SetupInfo.QrCodeSetupImageUrl;
-                //ViewBag.SetupCode = SetupInfo.ManualEntryKey;
             }
             else
             {
                 message = "Login failed";
+                ViewBag.FailLogin = true;
             }
 
             ViewBag.Message = message;

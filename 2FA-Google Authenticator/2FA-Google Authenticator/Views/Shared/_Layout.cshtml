@@ -12,12 +12,7 @@
     <div class="navbar navbar-inverse navbar-fixed-top">
         <div class="container">
             <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                @Html.ActionLink("2FA - Google Authenticator", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })
+                <h2 class="text-muted">2FA - Google Authenticator</h2>
             </div>
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
@@ -30,7 +25,7 @@
         @RenderBody()
         <hr />
         <footer>
-            <p>&copy; @DateTime.Now.Year - My ASP.NET Application</p>
+            <p>&copy; @DateTime.Now.Year - Matija Sabolić, Marko Srnec - Projekt iz kolegija Sigurnost informacijskih sustava</p>
         </footer>
     </div>
 

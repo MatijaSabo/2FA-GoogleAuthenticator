@@ -12,7 +12,13 @@
         <h1>Login</h1>
     </div>
 
-    <div>@ViewBag.Message</div>
+    if(ViewBag.FailLogin != null)
+    {
+        <div class="alert alert-dismissable alert-danger">
+            <a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>
+            <strong>@ViewBag.Message</strong>
+        </div>
+    }
 
     <div>
         @using (Html.BeginForm())
